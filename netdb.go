@@ -101,7 +101,8 @@ func init() {
 }
 
 // Equal checks if two Protoents are the same, which is the case if
-// their protocol numbers are identical or both are nil.
+// their protocol numbers are identical or when both Protoents are
+// nil.
 func (this *Protoent) Equal(other *Protoent) bool {
 	if this == nil && other == nil {
 		return true
@@ -112,6 +113,22 @@ func (this *Protoent) Equal(other *Protoent) bool {
 	}
 
 	return this.Number == other.Number
+}
+
+// Equal checks if two Servents are the same, which is the case if
+// their port numbers and protocols are identical or when both
+// Servents are nil.
+func (this *Servent) Equal(other *Servent) bool {
+	if this == nil && other == nil {
+		return true
+	}
+
+	if this == nil || other == nil {
+		return false
+	}
+
+	return this.Port == other.Port &&
+		this.Protocol.Equal(other.Protocol)
 }
 
 // GetProtoByNumber returns the Protoent for a given protocol number.
