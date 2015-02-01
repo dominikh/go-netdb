@@ -3,7 +3,7 @@
 ## Install
 
 ```sh
-go get -u honnef.co/go/netdb
+go get honnef.co/go/netdb
 ```
 
 ## Documentation
