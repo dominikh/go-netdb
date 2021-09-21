@@ -1,3 +1,5 @@
+**This package has been frozen and deprecated. It is of poor quality and should not be used. Consider evaluating alternatives, such as [github.com/TheDiveO/netdb](https://github.com/TheDiveO/netdb)**
+
 # netdb
 
 ## Install
